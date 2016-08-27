@@ -1,0 +1,41 @@
+<!-- JNLP File for Gravity and Orbits -->
+
+<jnlp spec="1.0+" codebase="/Users/student/Desktop/java/AfricanTradeGame" href="AfricanTradeGame.jnlp">
+
+    <information>
+
+        <title>AfricanTradeGame</title>
+
+        <vendor>me</vendor>
+
+        <description>@PROJECT.DESCRIPTION@</description>
+
+        <description kind="short">AfricanTradeGame</description>
+        
+        <description kind="long"> THE African Trade Game</description>
+
+        <offline-allowed/>
+
+    </information>
+
+    <resources>
+
+        <j2se version="1.4+"/>
+
+        <property name="javaws.phet.locale" value="en" />
+<property name="javaws.user.language" value="en" />
+
+        <jar href="AfricanTradeGame.jar"/>
+
+    </resources>
+
+    
+
+    <application-desc main-class="startup">
+
+        
+
+    </application-desc>
+
+</jnlp>
+
