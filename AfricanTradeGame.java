@@ -2,9 +2,11 @@
 
 import java.io.PrintStream;
 import java.util.EventListener;
+import java.io.*;
 class AfricanTradeGameinTerminal{
 //AfricanTradeGameinTerminal() { }
 	public static void main(String args[]) {
+		try{
 		System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n            __      _                   _______            _         _____                      \n     /\\    / _|    (_)                 |__   __|          | |       / ____|                     \n    /  \\  | |_ _ __ _  ___ __ _ _ __      | |_ __ __ _  __| | ___  | |  __  __ _ _ __ ___   ___ \n   / /\\ \\ |  _| '__| |/ __/ _` | '_ \\     | | '__/ _` |/ _` |/ _ \\ | | |_ |/ _` | '_ ` _ \\ / _ \\\n  / ____ \\| | | |  | | (_| (_| | | | |    | | | | (_| | (_| |  __/ | |__| | (_| | | | | | |  __/\n /_/    \\_\\_| |_|  |_|\\___\\__,_|_| |_|    |_|_|  \\__,_|\\__,_|\\___|  \\_____|\\__,_|_| |_| |_|\\___|\n Created by AndyMan1222.\n\nGo to full screen! Press enter to continue.");
 		asker = scanner.nextLine();
 		System.out.println(" \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nAround the years 1000 AD, an African empire called the Ghana Empire gained power. They were in the middle of a trade route.\n The emperor of the empire decided to put tax on all trade items that come in and out.\n Back then, salt was important to travelling in the desert, and gold, mined in Africa, was used as coins.\n\n Your job as a salt seller is to travel through the Sahara, pay 1 gold coin for every two salt slabs you have to pass through Ghana,\n and use the \"silent barter\" System to get the best amount of gold for the amount of salt you offer.\n You and the gold trader can find the best offer for as long as you want.\n When you like the offer, pay the same amount as entering to leave, get more salt from your slave, and do it all over.\nYou lose if you don't have enough coins to pass through Ghana. \n \n The controls are:\n \n While trading:\n Type the amount, in numbers, of salt you want to offer. Type \"accept\" to take the coins and leave. Type \"leave\" to take your salt and leave without gaining coins.\n \n While in town: \n Type \"trade\" to find another trader. Type \"leave\"to go back to your home. \n \n Coming soon:\n \"trade gold\" to trade your gold (isn't in-game)\n \n press enter to start\n\nStarting parameters:\n gold:4\n salt:0\n\nAt any point where you have to type something, type \"exit\" to close the game safely\n \n press enter to start");
@@ -44,7 +46,16 @@ class AfricanTradeGameinTerminal{
 			System.out.println("\nYou left that trading area. Now what would you like to do? trade, leave"); }   
 			System.out.println("You return home safely.\n"); 
 			} 
-		while(true); }   
+		while(true);
+		}
+		catch(Exception e){
+			System.out.println("You can now exit. Have a nice day!");
+			try{
+				Runtime.getRuntime().exec("cmd exit");
+			}catch(Exception ee){}
+			System.exit(1);
+		} 
+	}
 	static void trade() { 
 		payment = -1; 
 		System.out.println((new StringBuilder()).append("How much salt would you like to place down? You have ").append(salt).append(" salt.").toString()); 

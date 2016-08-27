@@ -1,4 +1,4 @@
-import java.io.*;   
+import java.io.*;
 class startup {
 	private static String OS = System.getProperty("os.name").toLowerCase();
 
@@ -35,10 +35,10 @@ class startup {
 		System.out.println(OS);
 		try {
 			if (isWindows()) {
-            	Process process = Runtime.getRuntime().exec("cmd.exe /c cd \""+ System.getProperty("user.dir") +"\" & start cmd.exe /k \"java AfricanTradeGameinTerminal\"");
-				process = Runtime.getRuntime().exec("exit");
+            	Process process = Runtime.getRuntime().exec("cmd.exe /c cd \""+ System.getProperty("user.dir") +"\" & start cmd.exe /k \"java -cp AfricanTradeGame.jar;. AfricanTradeGameinTerminal\"");
+				process = Runtime.getRuntime().exec("cmd exit");
         	} else if (isMac()) {
-            	System.out.println("This is Mac");
+            	System.out.println("This is Mac. Even though this was first developed on mac, it may not work.");
 				Process process = Runtime.getRuntime().exec("directory.command"); 
 				BufferedReader bufferedreader = new BufferedReader(new InputStreamReader(process.getInputStream())); 
 				try { process.waitFor(); } 
